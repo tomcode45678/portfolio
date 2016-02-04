@@ -1,3 +1,5 @@
+@import 'variables';
+
 /**
  * Site header
  */
@@ -160,19 +162,52 @@
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
         width:         calc(100% - (#{$spacing-unit} / 2));
     }
+
+    .site {
+      display: list-item;
+      width: 100%;
+    }
 }
 
+/**
+ *  Site content
+ */
+.site-list {
+  margin: 0;
+}
 
+.site {
+  width: 50%;
+  margin: 0 0 1px 0;
+  display: inline-block;
+
+  h2 {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+  }
+}
 
 /**
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+
 }
 
 .page-heading {
-    font-size: 20px;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    border-bottom: 1px solid;
+    margin: 0;
+
+    &.portfolio {
+      color: $portfolioMainColour;
+      border-bottom-color: $portfolioMainColour;
+    }
 }
 
 .post-list {
